@@ -1,0 +1,415 @@
+/* TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONT */
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-weight: 650; /* Aplica bold al texto */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+/* BODY BG */
+body {
+  width: 100vw; /* Establece el ancho del body al 100% del viewport width */
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0; /* Elimina el padding predeterminado del body */
+  background-color: rgb(27, 27, 27);
+  background-image:
+    linear-gradient(rgba(62, 62, 62, 0.5) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(62, 62, 62, 0.5) 2px, transparent 2px),
+    linear-gradient(rgba(62, 62, 62, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(62, 62, 62, 0.28) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+/* HEADER */
+.spikes {
+  position:relative;
+  background: #ededed;
+  margin: 50;
+  border-radius: 1em;
+  border-color: #3d3d3d;
+  border-style: solid;
+  border-width: 0.4em;
+}
+
+.spikes::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 98%;
+  z-index: 10;
+  display: block;
+  height: 100px;
+  background-size: 42px 100%;
+  background-image: linear-gradient(135deg, #ededed 25%, transparent 25%), linear-gradient(225deg, #ededed 25%, transparent 25%);
+  background-position: 0 0;
+  margin-inline: 0px;
+  
+}
+
+/* HEADER BUTTON */
+button {
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  transform: translateY(0);
+}
+
+/* CARD */
+.card {
+  height: auto;
+  background: #f3f3f3;
+  border-radius: 1em;
+  border-color: #414141;
+  border-style: solid;
+  border-width: 0.4em;
+  box-shadow: 0.3em 0.3em rgb(255, 158, 158);
+  background-image: url('/svg/quotes-end.svg');
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.card-2 {
+  height: auto;
+  background: #dcdcdc;
+  border-radius: 1em;
+  border-color: #3d3d3d;
+  border-style: solid;
+  border-width: 0.4em;
+  box-shadow: 0.3em 0.3em rgb(194, 255, 209);
+}
+
+.quote-card {
+  height: auto;
+  background-color: #fefefe;
+  background-image: url('/svg/quote.svg');
+  background-size: contain;
+  background-position: initial;
+  background-repeat: no-repeat;
+  border-radius: 1em;
+  border-color: #414141;
+  border-style: solid;
+  border-width: 0.4em;
+  box-shadow: 0.3em 0.3em rgb(255, 158, 158);
+}
+
+.quote-card p {
+  font-family: Inter, sans-serif;
+  font-weight: 100;
+  font-size: 1.0em;
+}
+
+.svg-icon {
+  margin-top: 0.3em;
+  margin-left: 0.5em;
+  width: 2em;
+  height: 2.5em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: grey;
+}
+
+.svg-icon circle {
+  stroke: #000;
+  stroke-width: 1;
+}
+
+.Title-9999 {
+  margin-bottom: 0.3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 5em;
+  margin-left: 0.3em;
+}
+
+.Subtitle-9999 {
+  margin-top: 0.3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+  margin-left: 0.3em;
+  
+}
+
+.Subtitle-9998 {
+  margin-top: -0.3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  font-size: 0.9em;
+  color: #646464;
+  margin-left: 0.8em;
+}
+
+.Description-9999 {
+  margin-bottom: 0.3em;
+  font-family: Inter, sans-serif;
+  font-weight: 100;
+  font-size: 0.9em;
+  margin-top: -12px;
+  text-align: center;
+}
+
+.wa-card-description {
+  margin-bottom: 0.3em;
+  font-family: 'Franklin Gothic Light', 'Arial Narrow', sans-serif;
+  font-weight: lighter;
+  font-size: 1.0em;
+  background-color: #ededed00;
+  text-align: justify;
+}
+
+.Description-Quote-Name {
+  font-family: Inter, sans-serif;
+  font-weight: 100;
+  font-size: 0.7em;
+  margin-top: -12px;
+  text-align: center;
+}
+
+.Tools-9999 {
+  font-size: 1.1em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  position: relative;
+  margin-left: 4em;
+  margin-top: -2.4em;
+}
+
+.YouGet-9999 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  position: relative;
+  margin-left: 4em;
+  margin-top: -2.4em;
+  font-size: 1.1em;
+}
+
+.svg-icon2 {
+  margin-top: 1em;
+  margin-left: 0.5em;
+  width: 2em;
+  height: 2em;
+}
+
+.svg-icon2 path,
+.svg-icon2 polygon,
+.svg-icon2 rect {
+  fill: grey;
+}
+
+.svg-icon2 circle {
+  stroke: #000;
+  stroke-width: 1;
+}
+
+/* WORK AREA FIRST COL DESCRIPTION */
+.first-div-style {
+  height: 180px;
+  background-image: url('/svg/dots.svg');
+  background-size: 40px 40px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+/* MODAL */
+.modal {
+  background-color: rgb(219, 219, 219);
+  border-radius: 1em;
+  border-color: #3d3d3d;
+  border-style: solid;
+  border-width: 0.4em;
+  box-shadow: 0.3em 0.3em rgb(194, 255, 209);
+}
+
+.modal-subtitle-color {
+  color: rgb(255, 158, 158);
+  text-shadow:
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+  -1px  1px 0 #000,
+   1px  1px 0 #000;
+}
+
+.modal a {
+  outline: none;
+}
+
+
+/* FOOTER */
+.spikes-footer {
+  position: relative;
+  background: #00000000;
+  height: 5vh;
+  margin-top: 5rem;
+}
+
+.spikes-footer::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 50px;
+  background-size: 50px 100%;
+  background-image: linear-gradient(135deg, rgb(27, 27, 27) 25%, transparent 25%), linear-gradient(225deg, rgb(27, 27, 27) 25%, transparent 25%);
+  background-position: 0 0;
+}
+
+.footer {
+  background-color: #ededed;
+}
+
+/* SOCIAL MEDIA CARD */
+.social-media-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 5px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+.cvSvg {
+  background-image: url('/svg/cv.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.footer-text {
+  font-weight: lighter;
+  font-size: small;
+}
+
+/* SCROLL FADE IN ANIMATION*/
+.scroll-fade-in {
+  animation: scrollFadeIn ease 3s;
+  -webkit-animation: scrollFadeIn ease 3s;
+  -moz-animation: scrollFadeIn ease 3s;
+  -o-animation: scrollFadeIn ease 3s;
+  -ms-animation: scrollFadeIn ease 3s;
+}
+
+@keyframes scrollFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para ocultar los elementos inicialmente */
+.to-fade-in {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease; /* Agrega una transición suave */
+}
+
+/* Estilo para mostrar los elementos cuando se aplica la clase scroll-fade-in */
+.to-fade-in.scroll-fade-in {
+  opacity: 1;
+  visibility: visible;
+}
