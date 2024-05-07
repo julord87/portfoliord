@@ -28,9 +28,9 @@ export const devWorksDb = [
         img: '/img/arquitect-web.jpg',
         description: "Web resume. Freelance work for Uruguayan Architect.",
         fullDescription: "Work done for the architecture studio of Emiliano Martínez, architect in Uruguay. The work was done using HTML, CSS, and some JavaScript.",
-        tools: ["HTML", "CSS", "Javascript"],
+        tools: ["HTML", "Bootstrap", "Javascript"],
         link: "/",
-        repolink: "https://github.com/julocoder"
+        repolink: "https://github.com/julord87/portfoliord"
     },
     {
         id: 2,
@@ -46,15 +46,15 @@ export const devWorksDb = [
     },
     {
         id: 3,
-        name: "lost-pets-app",
-        title: "Lost Pets app",
+        name: "task-64",
+        title: "Task-64",
         subtitle: "/ web app",
-        img: '/img/lost-pets-app.jpg',
-        description: "PetPal: Connecting lost pets with their owners. Reunite furry friends!",
-        fullDescription: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical. Es espectacular esto.",
-        tools: ["TypeScript", "Bootstrap", "MongoDB"],
+        img: '/img/task-64.jpg',
+        description: "A collaborative web app tailored for project management.",
+        fullDescription: "For this app, I handled both frontend and backend development. I utilized technologies like Zod, CORS, MongoDB, React Query, React Hook Form, and more to craft a collaborative web app for enterprise or team project management.",
+        tools: ["React", "Typescript", "MongoDB"],
         link: "/",
-        repolink: "https://github.com/julocoder"
+        repolink: "https://github.com/julord87/Task-64"
     }
 ]
 
